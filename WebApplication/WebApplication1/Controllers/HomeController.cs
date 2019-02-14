@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication1.Helpers;
 
 namespace WebApplication1.Controllers
 {
@@ -16,8 +17,6 @@ namespace WebApplication1.Controllers
         [Authorize]
         public ActionResult About()
         {
-            ViewBag.Message = "Let's feed the rabbit.";
-
             return View();
         }
 
@@ -25,8 +24,11 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult About(int seconds=1)
         {
-            //ViewBag.Message = "Let's feed the rabbit.";
-            
+            var sent= IoTHubHelper.SendDirectMethod(seconds);
+
+            if (sent) { ViewBag.Result = "Message sent! "; }
+            else { ViewBag.Result = "Error sending."; }
+
             return View();
         }
 
