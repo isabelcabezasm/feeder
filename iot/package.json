@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.js"
+    "start": "node main.js",
+    "preinstall": "npm i -g pm2"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,6 @@
     "azure-iot-device-mqtt": "^1.9.3",
     "dotenv": "^6.2.0",
     "onoff": "^4.0.0",
-    "pm2": "^3.3.1",
     "raspi": "^6.0.1",
     "raspi-pwm": "^6.0.0"
   }
