@@ -263,3 +263,4 @@ __pycache__/
 
 #My enviroment vars
 *.env
+/WebApplication/WebApplication1/local.config
