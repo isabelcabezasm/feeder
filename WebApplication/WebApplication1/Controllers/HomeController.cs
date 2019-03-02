@@ -17,28 +17,8 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        [Authorize]
         public ActionResult About()
         {
-            return View();
-        }
-
-        [Authorize]
-        [HttpPost]
-        public async Task<ActionResult> About(int seconds=1)
-        {
-            try
-            {
-                var sent = await IoTHubHelper.SendDirectMethod(seconds);
-
-                if (sent == 200) { ViewBag.Result = "Message sent! "; }
-                else { ViewBag.Result = $"Error sending. {sent}"; }
-            }
-            catch(IotHubException ex)
-            {
-                ViewBag.Result = $"Exception sending. {ex.Message}";
-                Trace.TraceError(ex.Message);
-            }
             return View();
         }
 
