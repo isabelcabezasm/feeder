@@ -1,0 +1,33 @@
+{
+  "name": "raspberrypi-feeder",
+  "version": "0.0.1",
+  "description": "A Raspi pet feeder that connects to IoT Hub to receive signals",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isabelcabezasm/feeder.git"
+  },
+  "keywords": [
+    "pet",
+    "feeder"
+  ],
+  "author": "Isabel Cabezas Martin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/isabelcabezasm/feeder/issues"
+  },
+  "homepage": "https://github.com/isabelcabezasm/feeder#readme",
+  "dependencies": {
+    "azure-iot-device": "^1.9.3",
+    "azure-iot-device-mqtt": "^1.9.3",
+    "dotenv": "^6.2.0",
+    "onoff": "^4.0.0",
+    "pm2": "^3.3.1",
+    "raspi": "^6.0.1",
+    "raspi-pwm": "^6.0.0"
+  }
+}
